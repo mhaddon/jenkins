@@ -6,9 +6,8 @@ pipelineJob('Test') {
     triggers {
         scm('H/15 * * * *')
     }
-    definition {
-        cps {
-            script(readFileFromWorkspace('Jenkinsfile'))
-        }
+
+    steps {
+        script(readFileFromWorkspace('Jenkinsfile'))
     }
 }
