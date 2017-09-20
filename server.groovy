@@ -9,6 +9,11 @@ job('Test') {
         maven {
             mavenInstallation('myMaven')
             goals('clean')
+            goals('compile')
+        }
+        maven {
+            mavenInstallation('myMaven')
+            goals('clean')
             goals('test')
         }
     }
