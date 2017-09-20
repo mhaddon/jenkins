@@ -1,6 +1,6 @@
 job('Test') {
     scm {
-        git('git@github.com:mhaddon/jenkins.git')
+        git('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git')
     }
     triggers {
         scm('H/15 * * * *')
