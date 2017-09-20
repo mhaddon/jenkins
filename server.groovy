@@ -1,9 +1,6 @@
 job('Test') {
     scm {
-        git{
-            remote('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git')
-            branch('tests')
-        }
+        git('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git', 'tests')
     }
     triggers {
         scm('H/15 * * * *')
