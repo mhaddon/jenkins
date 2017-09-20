@@ -1,4 +1,4 @@
-job('Test') {
+pipelineJob('Test') {
     scm {
         git('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git', 'tests')
     }
@@ -10,11 +10,6 @@ job('Test') {
             mavenInstallation('myMaven')
             goals('clean')
             goals('compile')
-        }
-        maven {
-            mavenInstallation('myMaven')
-            goals('clean')
-            goals('test')
         }
     }
 }
