@@ -1,7 +1,7 @@
 pipelineJob('Test') {
-//    scm {
-//        git('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git', 'tests')
-//    }
+    scm {
+        git('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git', 'tests')
+    }
 
     triggers {
         scm('H/15 * * * *')
