@@ -1,7 +1,7 @@
 job('Test') {
     scm {
         git{
-            url('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git')
+            remote('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git')
             branch('tests')
         }
     }
