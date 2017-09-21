@@ -1,13 +1,12 @@
 pipelineJob('Test') {
-    scm {
-        git('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git', 'tests')
+    definition{
+        cpsScm {
+            scm {
+                git('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git', 'tests')
+            }
+        }
     }
-
     triggers {
         scm('H/15 * * * *')
-    }
-
-    steps {
-        script(readFileFromWorkspace('Jenkinsfile'))
     }
 }
