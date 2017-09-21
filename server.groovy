@@ -2,15 +2,14 @@ pipelineJob('Test') {
     definition{
         cpsScm {
             scm {
-                git('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git', 'tests') {
-                    configure { project ->
-                        project / builders << 'org.foo.FooBuilder' {
-                            userName('a')
-                            password('a')
-                            credentialsId('ojfsa')
-                        }
+                git {
+                    remote {
+                        name('origin')
+                        url('https://github.com/mhaddon/SpringBoot-AirportDemoProject.git')
+                        credentials('3196088f-7b55-4e23-85a4-40866dfeb543')
                     }
                 }
+                branch('tests')
             }
         }
     }
